@@ -15,8 +15,8 @@
 - name: Wordpress | Set permissions
   file:
      path=/var/lib/nginx/html/wordpress
-     owner=nginx
-     group=nginx
+     owner=nobody
+     group=nobody
      state=directory
      recurse=yes
 
@@ -37,9 +37,9 @@
      path=/wordpress.tar.gz
      state=absent
 
-- name: apk | Install curl
+- name: apk | Install curl, openssl
   apk: 
-     name=curl
+     name=curl,openssl
      state=present 
 
 - name: apk | Remove cache

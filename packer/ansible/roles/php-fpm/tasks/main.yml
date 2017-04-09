@@ -8,4 +8,4 @@
 - name: PHP-FPM | Setting config file src=php-fpm.conf
   template:
      src=php-fpm.conf
-     dest=/etc/php
+     dest=/etc/php5
